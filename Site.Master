@@ -1,0 +1,266 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="OnlineRecipeSharing.SiteMaster" %>
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head runat="server">
+    <!-- Basic Page Needs
+================================================== -->
+    <meta charset="utf-8">
+    <title>Online Recipe Sharing</title>
+
+    <!-- Mobile Specific Metas
+================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <%-- <!-- CSS
+================================================== -->
+    <style>
+        .nav-link {
+            display: inline-flex;
+            align-items: center;
+            margin-right: 10px;
+            text-decoration: none;
+            color: #333; /* Adjust the color as needed */
+        }
+
+            .nav-link i {
+                margin-right: 5px;
+            }
+    </style>--%>
+
+    <%--<link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/colors/green.css" id="colors">
+    <asp:PlaceHolder ID="head" runat="server"></asp:PlaceHolder>
+
+    <!-- <webopt:BundleReference runat="server" Path="~/Content/css" /> -->
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+</head>--%>
+    <!-- CSS
+================================================== -->
+    <style>
+        .nav-link {
+            display: inline-flex;
+            align-items: center;
+            margin-right: 10px;
+            text-decoration: none;
+            color: #333; /* Adjust the color as needed */
+        }
+
+            .nav-link i {
+                margin-right: 5px;
+            }
+
+        /* Social Icons */
+        .social-icons {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+            .social-icons li {
+                display: inline-block;
+                margin-right: 10px;
+            }
+
+                .social-icons li:last-child {
+                    margin-right: 0;
+                }
+
+            .social-icons a {
+                display: block;
+                width: 40px;
+                height: 40px;
+                line-height: 40px;
+                text-align: center;
+                border-radius: 50%;
+                background-color: #333;
+                color: #fff;
+                transition: background-color 0.3s ease;
+            }
+
+                .social-icons a:hover {
+                    background-color: #555;
+                }
+
+            /* Adjust icon size */
+            .social-icons i {
+                font-size: 20px;
+            }
+    </style>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/colors/green.css" id="colors">
+    <asp:PlaceHolder ID="head" runat="server"></asp:PlaceHolder>
+
+    <!-- <webopt:BundleReference runat="server" Path="~/Content/css" /> -->
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <form runat="server">
+        <!-- Header
+================================================== -->
+        <header id="header">
+
+            <!-- Container -->
+            <div class="container">
+
+                <!-- Logo / Mobile Menu -->
+                <div class="three columns">
+                    <div id="logo">
+
+                        <h1><a href="Default.aspx">
+
+                            <img src="images/FinalLogo.png" alt="foodiee" style="width: 150px;" /></a></h1>
+
+                    </div>
+                </div>
+
+<div class="thirteen columns navigation">
+    <nav id="navigation" class="menu nav-collapse">
+        <ul>
+            <li><a href="Default.aspx" id="current">Home</a></li>
+            <li><a href="browse_recipe.aspx">Recipes</a></li>
+            <li>
+                <a href="#">Category</a>
+                <ul>
+                    <li><a href="recipes_category.aspx?Category=veg">Veg</a></li>
+                    <li><a href="recipes_category.aspx?Category=non-veg">Non-Veg</a></li>
+                    <li><a href="recipes_category.aspx?Category=vegan">Vegan</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Meal Type</a>
+                <ul>
+                    <li><a href="recipe_meal.aspx?DDL_Meal=Appetizer">Appetizer</a></li>
+                    <li><a href="recipe_meal.aspx?DDL_Meal=Desserts">Desserts</a></li>
+                    <li><a href="recipe_meal.aspx?DDL_Meal=Main meal">Main meal</a></li>
+                    <li><a href="recipe_meal.aspx?DDL_Meal=SnackS">Snacks</a></li>
+                </ul>
+            </li>
+            <li><a href="contactusNEW.aspx">Contact Us</a></li>
+            <li><a href="submitrecipe.aspx">Submit Recipe</a></li>
+            <li>
+                <asp:LinkButton CssClass="nav-link" ID="User_login" runat="server" OnClick="User_login_Click">
+                    <span class="icon fa fa-user"></span> SignIn/SignUp
+                </asp:LinkButton>
+            </li>
+            <li>
+                <asp:LinkButton CssClass="nav-link" ID="After_log" runat="server" OnClientClick="toggleDropdown(); return false;">
+                    <i class="fas fa-user-circle"></i> Hello User
+                </asp:LinkButton>
+                <ul id="userDropdown" class="dropdown-menu" style="display: none;">
+                    <li>
+                        <asp:LinkButton CssClass="nav-link" ID="WishlistLink" runat="server" PostBackUrl="wishlist.aspx">
+                            <i class="fas fa-heart"></i> Saved Recipes
+                        </asp:LinkButton>
+                    </li>
+                    <li>
+                        <asp:LinkButton CssClass="nav-link" ID="User_Profile" runat="server" PostBackUrl="userprofile.aspx">
+                            <i class="fas fa-user-circle"></i> User Profile
+                        </asp:LinkButton>
+                    </li>
+                    <li>
+                        <asp:LinkButton CssClass="nav-link" ID="Logout" runat="server" OnClick="Logout_Click">
+                            <i class="fas fa-sign-out-alt"></i> Logout
+                        </asp:LinkButton>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="Abotus.aspx">About Us</a></li>
+        </ul>
+    </nav>
+</div>
+
+
+
+
+            </div>
+        </header>
+
+        <asp:ContentPlaceHolder ID="MainContent" runat="server">
+        </asp:ContentPlaceHolder>
+
+        <!-- Footer
+================================================== -->
+        <div id="footer">
+            <!-- Container -->
+            <div class="container">
+                <div class="ten columns">
+                    <h3 class="headline footer">About</h3>
+                    <span class="line"></span>
+                    <div class="clearfix"></div>
+                    <p>
+                        Welcome to Flavour Fusion – your ultimate destination for culinary inspiration! Our platform brings together food enthusiasts worldwide to discover, create, and share delightful recipes. Join us on this exciting gastronomic journey!
+    <a href="Abotus.aspx"><strong>Learn more</strong></a>
+                    </p>
+
+                </div>
+
+                <div class="four columns">
+                    <h3 class="headline footer">Recipes</h3>
+                    <span class="line"></span>
+                    <div class="clearfix"></div>
+                    <ul class="footer-links">
+                        <li><a href="browse_recipe.aspx">Browse Recipes</a></li>
+                        <li><a href="browse_recipe.aspx">Recipe Page</a></li>
+                        <li><a href="submitrecipe.aspx">Submit Recipe</a></li>
+                    </ul>
+                </div>
+                <div class="eight columns">
+                    <h3 class="headline footer">Connect with Us</h3>
+                    <span class="line"></span>
+                    <div class="clearfix"></div>
+                    <ul class="social-icons">
+                        <li><a href="https://www.facebook.com/yourpage" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="https://twitter.com/yourpage" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="https://instagram.com/yourpage" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                    </ul>
+
+                </div>
+            </div>
+            <!-- Container / End -->
+        </div>
+        <!-- Footer / End -->
+
+        <!-- Footer Bottom / Start -->
+        <div id="footer-bottom">
+        </div>
+
+
+        <!-- Back To Top Button -->
+        <div id="backtotop"><a href="#"></a></div>
+
+        <!-- Java Script
+================================================== -->
+        <script src="scripts/jquery-1.11.0.min.js"></script>
+        <script src="scripts/jquery-migrate-1.2.1.min.js"></script>
+        <script src="scripts/jquery.superfish.js"></script>
+        <script src="scripts/jquery.royalslider.min.js"></script>
+        <script src="scripts/responsive-nav.js"></script>
+        <script src="scripts/hoverIntent.js"></script>
+        <script src="scripts/isotope.pkgd.min.js"></script>
+        <script src="scripts/chosen.jquery.min.js"></script>
+        <script src="scripts/jquery.tooltips.min.js"></script>
+        <script src="scripts/jquery.magnific-popup.min.js"></script>
+        <script src="scripts/jquery.pricefilter.js"></script>
+        <script src="scripts/custom.js"></script>
+        <script>
+            function toggleDropdown() {
+                var dropdown = document.getElementById("userDropdown");
+                dropdown.style.display = dropdown.style.display === "none" ? "block" : "none";
+            }
+        </script>
+
+    </form>
+</body>
+</html>
+
+
+
