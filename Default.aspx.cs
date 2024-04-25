@@ -32,7 +32,7 @@ namespace OnlineRecipeSharing
                     while (reader.Read())
                     {
                         Recipe recipe = new Recipe();
-                        recipe.Id = Convert.ToInt32(reader["recipe_id"]);
+                        recipe.Id = Convert.ToInt32(reader["recipe_id"]); 
                         recipe.Name = reader["RecipeTitle"].ToString();
                         recipe.CookingTime1 = reader["CookingTime"].ToString();
                         recipe.Image = reader["image"].ToString();
