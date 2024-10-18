@@ -1,4 +1,4 @@
-# ShareYoutRecipies
+# ShareYourRecipes
 
 ## Features:
 
