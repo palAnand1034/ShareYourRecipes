@@ -10,7 +10,7 @@ namespace OnlineRecipeSharing
     {
         string connectionString = ConfigurationManager.ConnectionStrings["dbconnection"].ConnectionString;
         bool isEditMode = false;
-        int recipeID=0 ;
+        int recipeID = 0;
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -85,7 +85,7 @@ namespace OnlineRecipeSharing
                         Protein.Text = reader["Protein"].ToString();
                         keywords.Text = reader["keywords"].ToString();
                         tags.Text = reader["tags"].ToString();
-                        
+
                     }
                 }
             }
@@ -276,9 +276,6 @@ namespace OnlineRecipeSharing
                     }
                     else
                     {
-                        // If no meal types available, show a message
-                        // You can customize this message as needed
-                        // Example: lblNoMealTypes.Text = "No meal types available.";
                     }
                 }
             }

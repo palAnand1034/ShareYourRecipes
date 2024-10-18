@@ -2,17 +2,13 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 
-
-
     <!-- Slider
 ================================================== -->
-
     <div id="homeSlider" class="royalSlider rsDefaultInv">
         <!-- Slide #1 - Greek Chicken Pasta -->
         <div class="rsContent">
-            <a class="rsImg" href="Upload\greenchikecnpasta.jpg"></a>
+            <a class="rsImg" href="Upload\slide1.jpg"></a>
             <i class="rsTmb">Greek Chicken Pasta</i>
-
             <!-- Slide Caption -->
             <div class="SlideTitleContainer rsABlock">
                 <div class="CaptionAlignment">
@@ -22,9 +18,7 @@
                         </ul>
                         <div class="clearfix"></div>
                     </div>
-
-
-                    <h2><a href="Recipie_details.aspx?recipeId=1234" class="rsSlideTitle title">Greek Chicken Pasta</a></h2>
+                    <h2><a href="Recipie_details.aspx?recipeId=93" class="rsSlideTitle title">Greek Chicken Pasta</a></h2>
                     <div class="rsSlideTitle details">
                         <ul>
                             <li><i class="fa fa-cutlery"></i>4 Servings</li>
@@ -32,50 +26,15 @@
                             <li><i class="fa fa-user"></i>by <a href="#">Chef Khan</a></li>
                         </ul>
                     </div>
-
-                    <a href="Recipie_details.aspx?recipeId=1234" class="rsSlideTitle button">View Recipe</a>
-
+                    <a href="Recipie_details.aspx?recipeId=93" class="rsSlideTitle button">View Recipe</a>
                 </div>
             </div>
-
         </div>
-
-        <div class="rsContent">
-            <a class="rsImg" href="Upload\popchoclatecakes.jpg"></a>
-            <i class="rsTmb">Greek Chicken Pasta1</i>
-
-            <!-- Slide Caption -->
-            <div class="SlideTitleContainer rsABlock">
-                <div class="CaptionAlignment">
-                    <div class="rsSlideTitle tags">
-                        <ul>
-                            <li>Baking</li>
-                        </ul>
-                        <div class="clearfix"></div>
-                    </div>
-
-
-                    <h2><a href="Recipie_details.aspx?recipeId=1234" class="rsSlideTitle title">Greek Chicken Pasta</a></h2>
-                    <div class="rsSlideTitle details">
-                        <ul>
-                            <li><i class="fa fa-cutlery"></i>4 Servings</li>
-                            <li><i class="fa fa-clock-o"></i>45 minutes</li>
-                            <li><i class="fa fa-user"></i>by <a href="#">Chef Khan</a></li>
-                        </ul>
-                    </div>
-
-                    <a href="Recipie_details.aspx?recipeId=1234" class="rsSlideTitle button">View Recipe</a>
-
-                </div>
-            </div>
-
-        </div>
-
         <!-- Slide #2 - Chocolate Cake Pops -->
         <div class="rsContent">
             <a class="rsImg" href="Upload\popchoclatecakes.jpg"></a>
+            <img src="upload/slide2.jpg" />
             <i class="rsTmb">Chocolate Cake Pops</i>
-
             <!-- Slide Caption -->
             <div class="SlideTitleContainer rsABlock">
                 <div class="CaptionAlignment">
@@ -85,9 +44,7 @@
                         </ul>
                         <div class="clearfix"></div>
                     </div>
-
-                    <h2><a href='<%# "Recipie_details.aspx?recipeId=" + Eval("recipe_id") %>' class="rsSlideTitle title">Chocolate Cake Pops</a></h2>
-
+                    <h2><a href='Recipie_details.aspx?recipeId=69' class="rsSlideTitle title">Chocolate Cake Pops</a></h2>
                     <div class="rsSlideTitle details">
                         <ul>
                             <li><i class="fa fa-cutlery"></i>Serves 12</li>
@@ -95,18 +52,14 @@
                             <li><i class="fa fa-user"></i>by <a href="#">Chef Patel</a></li>
                         </ul>
                     </div>
-
-                    <a href='<%# "Recipie_details.aspx?recipeId=" + Eval("recipe_id") %>' class="rsSlideTitle button">View Recipe</a>
-
+                    <a href="Recipie_details.aspx?recipeId=69" class="rsSlideTitle button">View Recipe</a>
                 </div>
             </div>
         </div>
-
         <!-- Slide #3 - Masala Dosa -->
         <div class="rsContent">
             <a class="rsImg" href="Upload\masaladosa.jpg"></a>
             <i class="rsTmb">Masala Dosa</i>
-
             <!-- Slide Caption -->
             <div class="SlideTitleContainer rsABlock">
                 <div class="CaptionAlignment">
@@ -116,9 +69,7 @@
                         </ul>
                         <div class="clearfix"></div>
                     </div>
-
-
-                    <h2><a href='<%# "Recipie_details.aspx?recipeId=" + Eval("recipe_id") %>' class="rsSlideTitle title">Masala Dosa</a></h2>
+                    <h2><a href='Recipie_details.aspx?recipeId=95' class="rsSlideTitle title">Masala Dosa</a></h2>
                     <div class="rsSlideTitle details">
                         <ul>
                             <li><i class="fa fa-cutlery"></i>4 Servings</li>
@@ -126,18 +77,14 @@
                             <li><i class="fa fa-user"></i>by <a href="#">Chef Rao</a></li>
                         </ul>
                     </div>
-
-                    <a href='<%# "Recipie_details.aspx?recipeId=" + Eval("recipe_id") %>' class="rsSlideTitle button">View Recipe</a>
-
+                    <a href="Recipie_details.aspx?recipeId=95" class="rsSlideTitle button">View Recipe</a>
                 </div>
             </div>
         </div>
-
         <!-- Slide #4 - Veg Spring Rolls -->
         <div class="rsContent">
             <a class="rsImg" href="Upload\vegspringrolls.jpg"></a>
             <i class="rsTmb">Veg Spring Rolls</i>
-
             <!-- Slide Caption -->
             <div class="SlideTitleContainer rsABlock">
                 <div class="CaptionAlignment">
@@ -147,9 +94,7 @@
                         </ul>
                         <div class="clearfix"></div>
                     </div>
-
-                    <h2><a href='<%# "Recipie_details.aspx?recipeId=" + Eval("recipe_id") %>' class="rsSlideTitle title">Veg Spring Roll</a></h2>
-
+                    <h2><a href='Recipie_details.aspx?recipeId=56' class="rsSlideTitle title">Veg Spring Roll</a></h2>
                     <div class="rsSlideTitle details">
                         <ul>
                             <li><i class="fa fa-cutlery"></i>Makes 10 spring rolls</li>
@@ -157,14 +102,11 @@
                             <li><i class="fa fa-user"></i>by <a href="#">Chef Li</a></li>
                         </ul>
                     </div>
-
-                    <a href="Recipie_details.aspx?recipeId=12345" class="rsSlideTitle button">View Recipe</a>
-                    <a href="https://google.com" class="rsSlideTitle button">View Recipe2</a>
+                    <a href="Recipie_details.aspx?recipeId=56" class="rsSlideTitle button">View Recipe</a>
 
                 </div>
             </div>
         </div>
-
         <!-- Slide #5 -->
         <div class="rsContent">
             <a class="rsImg" href="images/sliderA_05.jpg"></a>
@@ -191,15 +133,11 @@
                             <li><i class="fa fa-user"></i>by <a href="#">Sandra Fortin</a></li>
                         </ul>
                     </div>
-
                     <a href="recipe-page-1.html" class="rsSlideTitle button">View Recipe</a>
                 </div>
             </div>
-
         </div>
-
     </div>
-
 
     <!-- Content
 ================================================== -->
@@ -215,18 +153,7 @@
 
             <!-- Isotope -->
             <div class="isotope">
-
-
-
                 <asp:ListView ID="Lv_Recipies" runat="server">
-                    <%-- <LayoutTemplate>
-                        <div>
-                            <asp:PlaceHolder ID="itemPlaceholder" runat="server" />
-                        </div>
-                    </LayoutTemplate>
-                    <EmptyDataTemplate>
-                        <p>No recipe found. Kindly search for another recipe or add a new one.</p>
-                    </EmptyDataTemplate>--%>
                     <ItemTemplate>
                         <div class="four recipe-box columns">
                             <!-- Thumbnail -->
@@ -246,14 +173,12 @@
                             </div>
                         </div>
                     </ItemTemplate>
-
                 </asp:ListView>
 
                 <!-- Message Label -->
                 <asp:Label ID="lblMessage" runat="server" CssClass="message" Visible="false"></asp:Label>
 
             </div>
-
         </div>
         <div class="clearfix"></div>
 
@@ -266,7 +191,6 @@
                     <li><a href="#">3</a></li>
                 </ul>
             </nav>
-
             <nav class="pagination-next-prev">
                 <ul>
                     <li><a href="#" class="prev"></a></li>
@@ -274,14 +198,9 @@
                 </ul>
             </nav>
         </div>
-
-
-
         <!-- Container / End -->
 
         <div class="margin-top-5"></div>
     </div>
-
-
     <!-- Wrapper / End -->
 </asp:Content>

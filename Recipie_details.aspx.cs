@@ -22,14 +22,12 @@ namespace OnlineRecipeSharing
             if (Request.QueryString["recipeId"] != null)
             {
                 id = Request.QueryString["recipeId"];
-                // Ensure id is not empty and is a valid integer
                 if (!string.IsNullOrEmpty(id) && int.TryParse(id, out int recipeId))
                 {
                     BindRecipes(recipeId);
                 }
                 else
                 {
-                    // Handle invalid or missing recipe ID
                 }
             }
 
@@ -98,8 +96,6 @@ namespace OnlineRecipeSharing
             }
             catch (Exception ex)
             {
-                // Handle the exception, you can log it or throw a custom exception
-                // For now, let's just print the exception message
                 Console.WriteLine("An error occurred: " + ex.Message);
             }
 
@@ -139,24 +135,8 @@ namespace OnlineRecipeSharing
 
                 }
 
-
-
-                //img = imgProduct.image;
-
                 AddToWishlist(recipe_id, User_id, RecipeTitle, img, category);
                 Response.Redirect("wishlist.aspx");
-                //if (!IsProductInWishlist(recipe_id, User_id)) // Check if product is not already in the wishlist
-                //{
-                //    AddToWishlist(recipe_id, User_id, RecipeTitle.Text, img);
-                //    Response.Redirect("Wishlist.aspx");
-                //}
-                //else
-                //{
-                //    // Display alert if the product is already in the wishlist
-                //    ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('This product is already in your wishlist.');", true);
-                //}
-
-
             }
             else
             {
@@ -184,9 +164,9 @@ namespace OnlineRecipeSharing
                     }
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                // Handle the exception
+
             }
         }
     }

@@ -41,29 +41,28 @@
         <!-- Shared Recipes -->
         <h3>Shared Recipes</h3>
         <div class="row">
-           <asp:ListView ID="lvSharedRecipes" runat="server">
-    <ItemTemplate>
-        <!-- Thumbnail -->
-        <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
-            <div class="card">
-                <img src='<%# Eval("image") %>' class="card-img-top" alt="Recipe Image" style="max-width: 100%; height: auto;">
-                <div class="card-body">
-                    <h5 class="card-title"><%# Eval("RecipeTitle") %></h5>
-                    <p class="card-text">Cooking Time: <%# Eval("CookingTime") %></p>
-                    <!-- Link to view recipe -->
-                    <a href='<%# "Recipie_details.aspx?recipeId=" + Eval("recipe_id") %>' class="btn btn-primary btn-block">View Recipe</a>
-                    <asp:Button ID="btnEdit" runat="server" Text="Edit Recipe" CssClass="btn btn-secondary btn-block" OnClick="EditRecipe_Click" CommandArgument='<%# Eval("recipe_id") %>' />
-                </div>
-            </div>
-        </div>
-    </ItemTemplate>
-</asp:ListView>
+            <asp:ListView ID="lvSharedRecipes" runat="server">
+                <ItemTemplate>
+                    <!-- Thumbnail -->
+                    <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                        <div class="card">
+                            <img src='<%# Eval("image") %>' class="card-img-top" alt="Recipe Image" style="max-width: 100%; height: auto;">
+                            <div class="card-body">
+                                <h5 class="card-title"><%# Eval("RecipeTitle") %></h5>
+                                <p class="card-text">Cooking Time: <%# Eval("CookingTime") %></p>
+                                <!-- Link to view recipe -->
+                                <a href='<%# "Recipie_details.aspx?recipeId=" + Eval("recipe_id") %>' class="btn btn-primary btn-block">View Recipe</a>
+                                <asp:Button ID="btnEdit" runat="server" Text="Edit Recipe" CssClass="btn btn-secondary btn-block" OnClick="EditRecipe_Click" CommandArgument='<%# Eval("recipe_id") %>' />
+                            </div>
+                        </div>
+                    </div>
+                </ItemTemplate>
+            </asp:ListView>
 
         </div>
 
         <!-- Manage Links -->
         <div class="text-center mt-4">
-            <a href="categories.aspx" class="btn btn-info mr-2">Manage Categories</a>
             <a href="MealTypes.aspx" class="btn btn-info">Manage Meal Types</a>
         </div>
     </div>

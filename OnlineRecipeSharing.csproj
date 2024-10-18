@@ -142,7 +142,6 @@
     <Content Include="fonts\fontello0bee.eot" />
     <Content Include="fonts\fontello0bee.ttf" />
     <Content Include="fonts\fontello0bee.woff" />
-    <Content Include="contactus.aspx" />
     <Content Include="images\bg\about.png" />
     <Content Include="images\bg\bg1.jpg" />
     <Content Include="images\bg\bg7.jpg" />
@@ -188,6 +187,7 @@
     <Content Include="upload\cornmeal-berrydesrt.jpg" />
     <Content Include="upload\creamychickenvegiewrap.jpg" />
     <Content Include="upload\creamy_chicken_veggie_wrap.jpg.png" />
+    <Content Include="upload\creamy_chicken_veggie_wrap.png" />
     <Content Include="upload\crispymeatballs.jpg" />
     <Content Include="upload\daltadka.jpg" />
     <Content Include="upload\dessert1.jpg" />
@@ -224,6 +224,8 @@
     <Content Include="upload\ROSEWATER _TIRAMISU.jpg" />
     <Content Include="upload\Sabudana_vada.jpg" />
     <Content Include="upload\Samosas.jpg" />
+    <Content Include="upload\slide1.jpg" />
+    <Content Include="upload\slide2.jpg" />
     <Content Include="upload\Snack.jpg" />
     <Content Include="upload\southwestpasta.jpg" />
     <Content Include="upload\spinachpakora.jpg" />
@@ -475,13 +477,6 @@
     </Compile>
     <Compile Include="ViewSwitcher.ascx.designer.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
-    </Compile>
-    <Compile Include="contactus.aspx.cs">
-      <DependentUpon>contactus.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="contactus.aspx.designer.cs">
-      <DependentUpon>contactus.aspx</DependentUpon>
     </Compile>
     <Compile Include="submitrecipe.aspx.cs">
       <DependentUpon>submitrecipe.aspx</DependentUpon>

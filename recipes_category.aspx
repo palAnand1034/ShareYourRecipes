@@ -16,8 +16,6 @@
             <!-- Isotope -->
             <div class="isotope">
 
-
-
                 <asp:ListView ID="Lv_Recipies" runat="server">
                     <LayoutTemplate>
                         <div>
@@ -33,23 +31,17 @@
                             <!-- Thumbnail -->
                             <div class="thumbnail-holder">
 
-                                <img src='<%# Eval("image") %>' alt="" />
+                                <img src='<%# Eval("image") %>' alt="" class="recipe-image" /> <!-- Set fixed width and height -->
                                 <div class="hover-cover"></div>
-                                <%-- <div class="hover-icon">View Recipe</div>--%>
-                                <%--<div class="hover-icon"> <a href="Recipe_Detail.aspx">View Recipe</a></div>--%>
                                 <div class="hover-icon">
                                     <asp:HyperLink ID="ViewRecipeLink" runat="server" Text="View Recipe" NavigateUrl='<%# "Recipie_details.aspx?recipeId=" + Eval("Id") %>'></asp:HyperLink>
                                 </div>
-
-
                             </div>
                             <!-- Content -->
                             <div class="recipe-box-content">
                                 <h3><%# Eval("Name") %></h3>
                                 <div class="recipe-meta"><i class="fa fa-clock-o"></i><%# Eval("CookingTime1") %></div>
                                 <div class="clearfix"></div>
-                                <%-- <!-- Add to Wishlist Button -->
-                                <asp:Button ID="BtnAddToWishlist" runat="server" Text="Add to Wishlist" CommandArgument='<%# Eval("Id") %>' OnClick="BtnAddToWishlist_Click" CssClass="button" />--%>
                             </div>
                         </div>
 
@@ -58,7 +50,6 @@
 
                 <!-- Message Label -->
                 <asp:Label ID="lblMessage" runat="server" CssClass="message" Visible="false"></asp:Label>
-
 
             </div>
 
@@ -83,7 +74,13 @@
             </nav>
         </div>
 
-
+        <!-- CSS for setting fixed dimensions -->
+        <style>
+            .recipe-image {
+                width: 300px; 
+                height: 200px; 
+            }
+        </style>
 
         <!-- Container / End -->
 

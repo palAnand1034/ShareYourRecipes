@@ -60,11 +60,6 @@ namespace OnlineRecipeSharing
             Response.Redirect("Registration.aspx");
         }
 
-        //protected void  User_Profile_click(object sender, EventArgs e)
-        //{
-        //  Response.Redirect("Registration.aspx");
-        //}
-
         protected void User_Profile_click(object sender, EventArgs e)
         {
             // Check if the user is logged in

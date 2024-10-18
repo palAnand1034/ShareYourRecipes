@@ -100,7 +100,7 @@ namespace OnlineRecipeSharing
                     reader.Close();
                 }
             }
-            catch (Exception ex)
+            catch (Exception )
             {
                 SignInResult.InnerHtml = "An error occurred while signing in. Please try again later.";
             }

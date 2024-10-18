@@ -111,7 +111,6 @@ namespace OnlineRecipeSharing
                 throw ex;
             }
         }
-
         protected void ListViewMealTypes_ItemCanceling(object sender, ListViewCancelEventArgs e)
         {
             ListViewMealTypes.EditIndex = -1;

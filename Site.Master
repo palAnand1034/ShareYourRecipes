@@ -13,32 +13,6 @@
 ================================================== -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-    <%-- <!-- CSS
-================================================== -->
-    <style>
-        .nav-link {
-            display: inline-flex;
-            align-items: center;
-            margin-right: 10px;
-            text-decoration: none;
-            color: #333; /* Adjust the color as needed */
-        }
-
-            .nav-link i {
-                margin-right: 5px;
-            }
-    </style>--%>
-
-    <%--<link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/colors/green.css" id="colors">
-    <asp:PlaceHolder ID="head" runat="server"></asp:PlaceHolder>
-
-    <!-- <webopt:BundleReference runat="server" Path="~/Content/css" /> -->
-    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
-
-    <!-- Font Awesome -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
-</head>--%>
     <!-- CSS
 ================================================== -->
     <style>
@@ -107,86 +81,75 @@
         <!-- Header
 ================================================== -->
         <header id="header">
-
             <!-- Container -->
             <div class="container">
-
                 <!-- Logo / Mobile Menu -->
                 <div class="three columns">
                     <div id="logo">
-
                         <h1><a href="Default.aspx">
-
                             <img src="images/FinalLogo.png" alt="foodiee" style="width: 150px;" /></a></h1>
-
                     </div>
                 </div>
 
-<div class="thirteen columns navigation">
-    <nav id="navigation" class="menu nav-collapse">
-        <ul>
-            <li><a href="Default.aspx" id="current">Home</a></li>
-            <li><a href="browse_recipe.aspx">Recipes</a></li>
-            <li>
-                <a href="#">Category</a>
-                <ul>
-                    <li><a href="recipes_category.aspx?Category=veg">Veg</a></li>
-                    <li><a href="recipes_category.aspx?Category=non-veg">Non-Veg</a></li>
-                    <li><a href="recipes_category.aspx?Category=vegan">Vegan</a></li>
-                </ul>
-            </li>
-            <li>
-                <a href="#">Meal Type</a>
-                <ul>
-                    <li><a href="recipe_meal.aspx?DDL_Meal=Appetizer">Appetizer</a></li>
-                    <li><a href="recipe_meal.aspx?DDL_Meal=Desserts">Desserts</a></li>
-                    <li><a href="recipe_meal.aspx?DDL_Meal=Main meal">Main meal</a></li>
-                    <li><a href="recipe_meal.aspx?DDL_Meal=SnackS">Snacks</a></li>
-                </ul>
-            </li>
-            <li><a href="contactusNEW.aspx">Contact Us</a></li>
-            <li><a href="submitrecipe.aspx">Submit Recipe</a></li>
-            <li>
-                <asp:LinkButton CssClass="nav-link" ID="User_login" runat="server" OnClick="User_login_Click">
+                <div class="thirteen columns navigation">
+                    <nav id="navigation" class="menu nav-collapse">
+                        <ul>
+                            <li><a href="Default.aspx" id="current">Home</a></li>
+                            <li><a href="browse_recipe.aspx">Recipes</a></li>
+                            <li>
+                                <a href="#">Category</a>
+                                <ul>
+                                    <li><a href="recipes_category.aspx?Category=veg">Veg</a></li>
+                                    <li><a href="recipes_category.aspx?Category=non-veg">Non-Veg</a></li>
+                                    <li><a href="recipes_category.aspx?Category=vegan">Vegan</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">Meal Type</a>
+                                <ul>
+                                    <li><a href="recipe_meal.aspx?DDL_Meal=Appetizer">Appetizer</a></li>
+                                    <li><a href="recipe_meal.aspx?DDL_Meal=Desserts">Desserts</a></li>
+                                    <li><a href="recipe_meal.aspx?DDL_Meal=Main meal">Main meal</a></li>
+                                    <li><a href="recipe_meal.aspx?DDL_Meal=SnackS">Snacks</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="contactusNEW.aspx">Contact Us</a></li>
+                            <li><a href="submitrecipe.aspx">Submit Recipe</a></li>
+                            <li>
+                                <asp:LinkButton CssClass="nav-link" ID="User_login" runat="server" OnClick="User_login_Click">
                     <span class="icon fa fa-user"></span> SignIn/SignUp
-                </asp:LinkButton>
-            </li>
-            <li>
-                <asp:LinkButton CssClass="nav-link" ID="After_log" runat="server" OnClientClick="toggleDropdown(); return false;">
+                                </asp:LinkButton>
+                            </li>
+                            <li>
+                                <asp:LinkButton CssClass="nav-link" ID="After_log" runat="server" OnClientClick="toggleDropdown(); return false;">
                     <i class="fas fa-user-circle"></i> Hello User
-                </asp:LinkButton>
-                <ul id="userDropdown" class="dropdown-menu" style="display: none;">
-                    <li>
-                        <asp:LinkButton CssClass="nav-link" ID="WishlistLink" runat="server" PostBackUrl="wishlist.aspx">
+                                </asp:LinkButton>
+                                <ul id="userDropdown" class="dropdown-menu" style="display: none;">
+                                    <li>
+                                        <asp:LinkButton CssClass="nav-link" ID="WishlistLink" runat="server" PostBackUrl="wishlist.aspx">
                             <i class="fas fa-heart"></i> Saved Recipes
-                        </asp:LinkButton>
-                    </li>
-                    <li>
-                        <asp:LinkButton CssClass="nav-link" ID="User_Profile" runat="server" PostBackUrl="userprofile.aspx">
+                                        </asp:LinkButton>
+                                    </li>
+                                    <li>
+                                        <asp:LinkButton CssClass="nav-link" ID="User_Profile" runat="server" PostBackUrl="userprofile.aspx">
                             <i class="fas fa-user-circle"></i> User Profile
-                        </asp:LinkButton>
-                    </li>
-                    <li>
-                        <asp:LinkButton CssClass="nav-link" ID="Logout" runat="server" OnClick="Logout_Click">
+                                        </asp:LinkButton>
+                                    </li>
+                                    <li>
+                                        <asp:LinkButton CssClass="nav-link" ID="Logout" runat="server" OnClick="Logout_Click">
                             <i class="fas fa-sign-out-alt"></i> Logout
-                        </asp:LinkButton>
-                    </li>
-                </ul>
-            </li>
-            <li><a href="Abotus.aspx">About Us</a></li>
-        </ul>
-    </nav>
-</div>
-
-
-
-
+                                        </asp:LinkButton>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a href="Abotus.aspx">About Us</a></li>
+                        </ul>
+                    </nav>
+                </div>
             </div>
         </header>
-
         <asp:ContentPlaceHolder ID="MainContent" runat="server">
         </asp:ContentPlaceHolder>
-
         <!-- Footer
 ================================================== -->
         <div id="footer">
@@ -200,9 +163,7 @@
                         Welcome to Flavour Fusion – your ultimate destination for culinary inspiration! Our platform brings together food enthusiasts worldwide to discover, create, and share delightful recipes. Join us on this exciting gastronomic journey!
     <a href="Abotus.aspx"><strong>Learn more</strong></a>
                     </p>
-
                 </div>
-
                 <div class="four columns">
                     <h3 class="headline footer">Recipes</h3>
                     <span class="line"></span>

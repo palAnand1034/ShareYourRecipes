@@ -36,35 +36,6 @@ namespace OnlineRecipeSharing
             }
         }
 
-        //private void BindDropdownlistCategory()
-        //{
-        //    try
-        //    {
-        //        using (SqlConnection dbconnection = new SqlConnection(connectionString))
-        //        {
-        //            string query = "SELECT * FROM Categories UNION SELECT* FROM MealTypes ";
-
-
-        //            dbconnection.Open();
-        //            SqlDataAdapter da = new SqlDataAdapter(query, dbconnection);
-        //            DataTable dt = new DataTable();
-        //            da.Fill(dt);
-
-        //            if (dt.Rows.Count > 0)
-        //            {
-        //                ChooseCategory.DataSource = dt;
-        //                ChooseCategory.DataTextField = "CategoryName";
-        //                ChooseCategory.DataValueField = "CategoryID";
-        //                ChooseCategory.DataBind();
-        //            }
-        //        }
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        throw ex;
-        //    }
-        //}
-
         private void BindDataLv_Recipes()
         {
             try
@@ -83,7 +54,6 @@ namespace OnlineRecipeSharing
             }
             catch (Exception ex)
             {
-                // Handle the exception appropriately, such as logging it or displaying an error message
                 throw ex;
             }
         }
@@ -91,11 +61,8 @@ namespace OnlineRecipeSharing
 
         private void DisplayErrorMessage(string message)
         {
-            // You can display the error message to the user using a label or some other UI element
             ErrorMessageLabel.Text = message;
 
-            // You can also log the error message for further investigation
-            // Example: Logger.LogError(message);
         }
 
         protected void SearchButton_Click(object sender, EventArgs e)
@@ -151,8 +118,8 @@ namespace OnlineRecipeSharing
 }
 
 
-       
-    
+
+
 
 
 
